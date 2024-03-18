@@ -1,0 +1,291 @@
+:root {
+    --ff-sans: 'Inter', sans-serif;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+    --fs-100: 0.8rem;
+    --fs-400: 0.9375rem;
+    --fs-500: 1.50rem;
+    --fs-700: 1.80rem;
+    --fs-900: 2.00rem;
+
+    --clr-blue-100: hsla(227, 60%, 97%);
+    --clr-blue-400: hsl(214, 26%, 88%);
+    --clr-blue-700: hsl(213, 84%, 24%);
+}
+
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-sans);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-normal);
+}
+
+body {
+    margin: 0;
+    background: var(--clr-blue-100);
+}
+
+p {
+    line-height: 1.4;
+}
+
+header{
+    margin-top: 2rem;
+    margin-left: 2rem;
+    width: 10%; 
+}
+
+main{
+    margin-block: 2.5rem;
+}
+
+.layout-flex {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+
+    min-height: 944px;
+    margin-inline: 17.5rem 2rem
+}
+
+.layout-flex > * {
+    flex: 1;
+}
+
+.col--in {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    max-width: 680px;
+    /*border: 1px solid darkgreen;*/
+}
+
+
+.col--in textarea{
+    font-family: var(--ff-sans);
+    font-size: var(--fs-900);
+    background-color: var(--clr-blue-100);
+    color: var(--clr-blue-700);
+    outline: none;
+    resize: none;
+    border: none;
+    min-width: 100%;
+}
+
+.col--in textarea:focus{
+    outline: none;
+}
+
+.advertencia {
+    font-size: var(--fs-300);
+    color:hsl(210, 7%, 65%);
+    margin-bottom: 1rem;
+}
+
+.advertencia::before{
+    content: url(img/exclamation-circle-fill.svg);
+    padding-right: 10px;
+}
+
+.botones{
+    display: flex;
+}
+
+.botones button{
+    min-width: 45%;
+    min-height: 67px;
+    border-radius: 24px;
+    font-size: var(--fs-400);
+}
+
+#eboton{
+    color: #ffff;
+    background: var(--clr-blue-700);
+    border: 1px solid var(--clr-blue-700);
+    cursor: pointer;
+}
+
+#dboton {
+    color: var(--clr-blue-700);
+    border: 1px solid var(--clr-blue-700);
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.col--out {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    /*margin-inline: auto;*/
+    text-align: center;
+    max-width: 400px;
+    background: white;
+    box-shadow: 0px 24px 32px -8px hsla(0, 0%, 0%, 0.08);
+    border-radius: 32px;
+}
+
+.presentacion {
+    margin-block: auto;
+}
+
+.outText{
+    display: none;
+    border: none;
+    font-size: var(--fs-700);
+    margin-top: 1em;
+    padding-inline: 1em;
+}
+
+.outText:focus{
+    outline: none;
+}
+
+.mensaje{
+    font-size: var(--fs-300);
+    padding: 2rem;
+}
+
+.mensaje span{
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    margin-top: 2rem;
+}
+
+.div-copiar {
+    /*margin-block: auto 3rem;*/
+    margin-inline: auto;
+    margin-block: 1em 1em;
+}
+
+.boton-copiar {
+    border: 1px solid var(--clr-blue-700);
+    border-radius: 24px;
+    color: var(--clr-blue-700);
+    cursor: pointer;
+    min-height: 67px;
+    min-width: 336px;
+}
+
+/* text area auto resize */
+textarea::-webkit-scrollbar{
+    width: 0;
+}
+
+/* --------------------- TABLET --------------------- */
+@media only screen and (min-width: 576px) and (max-width: 1024px){
+    header{
+        margin-top: 2em;
+        margin-left: 0px;
+    }
+
+    .layout-flex {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3em;
+        margin-inline: 0;
+    }
+
+    .layout-flex > * {
+        flex: 0;
+    }
+
+
+    .col--in {
+        margin-inline: 1rem;
+        max-width: 100%;
+    }
+
+    .col--in textarea{ 
+        min-height: 20em;
+    }
+
+    .col--out {
+        margin-inline: 1rem;
+        max-width: 100%;
+    }
+    
+
+    .mensaje span{
+        font-size: var(--fs-500);
+    }
+
+    .presentacion img{
+        display: none;
+    }
+
+    .div-copiar, .boton-copiar {
+        min-width: 95%;
+    }   
+
+}
+/* --------------------- CELULAR --------------------- */
+@media only screen and (max-width: 575px){
+    header{
+        margin-top: 1;
+        margin-left: 0px;
+    }
+
+    header img {
+        width: auto;
+    }
+
+    .layout-flex {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3em;
+        margin-inline: 0;
+    }
+
+    .layout-flex > * {
+        flex: 0;
+    }
+
+    .col--in {
+        margin-inline: 1em;
+        max-width: 100%;
+    }
+    
+    .col--in textarea{ 
+        min-height: 12em;
+    }
+
+    .botones{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .botones button{
+        width: auto;
+    }
+
+    #dboton{
+        margin-left: 0;
+    }
+
+    .col--out {
+        margin-inline: 1rem;
+        max-width: 100%;
+    }
+
+    .mensaje span{
+        font-size: var(--fs-500);
+    }
+
+    .presentacion img{
+        display: none;
+    }
+
+    .div-copiar, .boton-copiar {
+        min-width: 95%;
+    }   
+}
+

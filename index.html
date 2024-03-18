@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Encriptador</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">    
+    </head>
+
+    <body>
+    
+        <header>
+            <img src="img/Logo.png" alt="Logo Alura">
+        </header>
+        <main>
+            <div class="layout-flex"> 
+
+                <div class="col--in">
+                    
+                    <div>
+                        <textarea class="area inputText" 
+                            autocapitalize="none" 
+                            placeholder="Ingrese el texto aqui" 
+                            onkeydown="return !'ABCDEFGHIJKLMNÑOPQRSTUVWXYZàáèéìíòóùú'.includes(event.key)" 
+                        ></textarea>
+                    </div>
+
+                    <div>
+                        <div>
+                            <p class="advertencia">Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        <div class="botones"> 
+                            <button onclick="fencriptar()" id="eboton">Encriptar</button>
+                            <button onclick="fdesencriptar()" id="dboton">Desencriptar</button>
+                        </div>
+                    </div>
+    
+                </div>
+    
+                <div class="col--out">
+        
+                    <textarea class="area outText"></textarea>
+
+                    <div class="presentacion">
+                        <div>
+                            <img src="img/Muñeco.svg" alt="Imagen de muñeco">
+                        </div>
+                        <div>
+                            <p class="mensaje"> <span>Ningún mensaje fue encontrado</span> 
+                                <br>Ingresa el texto que desees encriptar o desencriptar.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="div-copiar">
+                        <button class="boton-copiar" onclick="fcopiar()">Copiar</button>
+                    </div>
+    
+                </div>
+            
+            </div>
+        </main>
+        <script src="app.js"></script>
+    </body>
+</html>
