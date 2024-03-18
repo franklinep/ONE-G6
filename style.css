@@ -200,7 +200,7 @@ textarea::-webkit-scrollbar{
 
 
     .col--in {
-        margin-inline: 1rem;
+        margin-inline: auto;
         max-width: 100%;
     }
 
@@ -250,7 +250,7 @@ textarea::-webkit-scrollbar{
     }
 
     .col--in {
-        margin-inline: 1em;
+        margin-inline: auto;
         max-width: 100%;
     }
     
