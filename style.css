@@ -192,6 +192,7 @@ textarea::-webkit-scrollbar{
         justify-content: flex-start;
         gap: 3em;
         margin-inline: 0;
+        min-height: 100%;
     }
 
     .layout-flex > * {
@@ -200,7 +201,7 @@ textarea::-webkit-scrollbar{
 
 
     .col--in {
-        margin-inline: auto;
+        padding-inline: 1rem;
         max-width: 100%;
     }
 
@@ -243,6 +244,7 @@ textarea::-webkit-scrollbar{
         justify-content: flex-start;
         gap: 3em;
         margin-inline: 0;
+        min-height: 100%;
     }
 
     .layout-flex > * {
@@ -250,7 +252,7 @@ textarea::-webkit-scrollbar{
     }
 
     .col--in {
-        margin-inline: auto;
+        padding-inline: 1rem;
         max-width: 100%;
     }
     
